@@ -32,6 +32,21 @@ if (user_exists($user_id)){
 		$status = 'added user';
 		addUser($user_id, $user_name);
 	}
+	
+	
+//User List
+
+$users_list = json_encode($connection->get('users/lookup', array('screen_name' => 'stvedt,jeffrey_way,mike_dory')));
+
+$file = "../js/web-users.json";
+//$put = json_decode($users_list, true);
+$put = $users_list;
+//$put = 'test';
+
+//echo($put);
+file_put_contents($file, $put);
+
+
 //$test = $content["id"];
 /* Some example calls */
 

@@ -25,9 +25,12 @@
 		
       </pre>
       <pre>
-      	User Name:<?php print_r('User ID: ' . $user_id); ?>
+      	User ID:<?php print_r($user_id); ?>
       </pre>
     </p>
+    
+    <h3>List of Web people</h3>
+    <a href="../js/web-users.json">Returned JSON File</a>
 
   </body>
 </html>
