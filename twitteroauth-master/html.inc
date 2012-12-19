@@ -31,11 +31,11 @@
     <?php } ?>
     <p>
       <pre>
-        <?php 
-        	print_r($content);
-			//print_r($test);
-				
-		 ?>
+        User Name: <?php print_r($user_name); ?>
+		
+      </pre>
+      <pre>
+      	User Name:<?php print_r('User ID: ' . $user_id); ?>
       </pre>
     </p>
 

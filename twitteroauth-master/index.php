@@ -22,6 +22,8 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oau
 /* If method is set change API call made. Test is called by default. */
 $content = $connection->get('account/verify_credentials');
 
+$user_name = $content->screen_name;
+$user_id = $content->id;
 //$test = $content["id"];
 /* Some example calls */
 
