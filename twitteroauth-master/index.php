@@ -26,11 +26,11 @@ $content = $connection->get('account/verify_credentials');
 $user_name = $content->screen_name;
 $user_id = $content->id;
 $status;
-if (user_exists($user_name)){
+if (user_exists($user_id)){
 		$status =  'user_exists';
 	}else{
 		$status = 'added user';
-		addUser($user_name);
+		addUser($user_id, $user_name);
 	}
 //$test = $content["id"];
 /* Some example calls */

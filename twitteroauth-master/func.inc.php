@@ -2,15 +2,15 @@
 
 include '../db.inc.php';
 
-function user_exists($username){
-	$user = mysql_real_escape_string($username); //security against injection
-	$username_exists = mysql_query("SELECT * FROM `users` WHERE `username`='$user' LIMIT 1 ");
-	return(mysql_result($username_exists, 0) >= 1) ? true : false;
+function user_exists($id){
+	$id = mysql_real_escape_string($id); //security against injection
+	$id_exists = mysql_query("SELECT * FROM `users` WHERE `id`='$id' LIMIT 1 ");
+	return(mysql_result($id_exists, 0) >= 1) ? true : false;
 }
 
-function addUser($username){
+function addUser($id, $username){
 	$user = mysql_real_escape_string($username);//security against injection
-	mysql_query("INSERT INTO `users` VALUES ('','$user','0','0')");
+	mysql_query("INSERT INTO `users` VALUES ($id,'$user','0','0')");
 }
 
 //Output
