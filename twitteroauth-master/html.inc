@@ -30,6 +30,7 @@
       <?php echo '<h3>'.$status_text.'</h3>'; ?>
     <?php } ?>
     <p>
+    	Status: <?php print_r($status); ?>
       <pre>
         User Name: <?php print_r($user_name); ?>
 		
